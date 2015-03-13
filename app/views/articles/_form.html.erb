@@ -1,0 +1,12 @@
+<div class="main form">
+      <div class="container">
+        <ul class="form articles">
+          <%= simple_form_for(@article) do |f| %>
+         
+          	<li> <%= f.input :title, required: true, label: false, placeholder: "Enter a Title" %></li>
+          	<li> <%= f.input :url, required: true, label: false, placeholder: "Enter a URL" %></li>
+             <%= f.button :submit, "Submit", class: "btn btn-primary", method: :post %>
+          <% end %>
+        </ul>
+      </div>
+</div>
