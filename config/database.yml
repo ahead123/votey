@@ -22,8 +22,12 @@ test:
 
 production: &default
   adapter: postgresql
-  database: todoism
+  database: d1jn32b9g7hvo4
   encoding: utf8
   min_messages: warning
   pool: 5
   timeout: 5000
+  port: 5432
+  password: KzfnBKpxXBtX7SSUDwChu4wl1o
+  user: yxoqfrwrmatjjw
+  host: ec2-50-17-181-147.compute-1.amazonaws.com
