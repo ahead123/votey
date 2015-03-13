@@ -10,12 +10,14 @@ class ArticlesController < ApplicationController
 
   def create
   	@article = Article.new(article_params)
+  	respond_to do |format|
 			if @article.save
-				redirect_to root_path
+				format.html { redirect_to root_path, notice: 'Article created yo!' }
 			else
 				errors.render
 				redirect_to root_path
 			end
+		end
   end
 
   def update
@@ -32,7 +34,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-  	params.require(:article).permit(:title, :url)
+  	params.require(:article).permit(:title, :url, :upvotes)
   end
 
 end
